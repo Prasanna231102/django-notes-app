@@ -40,21 +40,23 @@ ls
 
 cd django-notes-app/
 
-sudo apt install docker.io        {docker is not pre-install}     
+sudo apt install docker.io_____________{docker is not pre-install}     
 
-docker ps.....permission denied
+docker ps___________{list all docker container}
 
-sudo usermod -aG docker $USER          {docker u install it dont have access of this notes app so we have to give permission to access docker write following command (add docker to a group of our user)}
+##u can see a permission denied
 
-sudo reboot              {root-USER got new permission}
+sudo usermod -aG docker $USER_____________{docker u install it dont have access of this notes app so we have to give permission to access docker write following command (add docker to a group of our user)}
+
+sudo reboot___________________root-USER got new permission}
 
 docker build -t notes-app .
 
 docker run -d -p 8000:8000 notes-app:latest
 
-allow 8000 port number in security group         {bcos in docker file 8000 is been exposed}
+##allow 8000 port number in security group_______________bcos in docker file 8000 is been exposed}
 
-then ur ip and port number(:8000)
+##then ur ip and port number(:8000)
 
 
 
